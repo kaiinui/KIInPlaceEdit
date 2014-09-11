@@ -30,9 +30,18 @@ There are some preset options.
 Available options are
 
 ```objc
-@property BOOL showPrompt; // Whether to show prompt before start in-place editing.
+@property BOOL showPrompt; // Default NO. Whether to show prompt before start in-place editing.
 @property NSString *promptLabel; // Default "Edit"
 @property KIInPlaceEditGesture gesture; // Currently only LongPress is provided.
+```
+
+You can provide your options as following.
+
+```objc
+KIInPlaceEditOptions *options = [[KIInPlaceEditOptions alloc] init];
+options.showPrompt = YES;
+options.promptLabel = "You want to edit?";
+[label ipe_enableInPlaceEdit:options];
 ```
 
 Installation
