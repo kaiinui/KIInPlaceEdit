@@ -9,6 +9,7 @@
 #import "KIInPlaceEditController.h"
 
 #import "UILabel+InPlaceEdit.h"
+#import "UILabel+InPlaceEditPrivate.h"
 
 @interface KIInPlaceEditController ()
 
