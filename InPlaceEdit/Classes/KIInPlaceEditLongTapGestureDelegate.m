@@ -17,12 +17,18 @@
 - (void)handleLongPressGesture:(UIGestureRecognizer *)recognizer {
     if (recognizer.state != UIGestureRecognizerStateBegan) { return; }
     
+    [self showMenuWithEditItemForView:recognizer.view];
+}
+
+# pragma mark - Helpers (UIMenuController)
+
+- (void)showMenuWithEditItemForView:(UIView *)view {
     // @see http://nshipster.com/uimenucontroller/
-    [recognizer.view becomeFirstResponder];
+    [view becomeFirstResponder];
     UIMenuController *menu = [UIMenuController sharedMenuController];
-    UIMenuItem *editItem = [[UIMenuItem alloc] initWithTitle:@"Edit" action:@selector(ipe_edit:)];
+    UIMenuItem *editItem = [[UIMenuItem alloc] initWithTitle:@"Edit" action:@selector(ipe_edit:)]; // TODO: make it i18n-able.
     [menu setMenuItems:@[editItem]];
-    [menu setTargetRect:recognizer.view.frame inView:recognizer.view.superview];
+    [menu setTargetRect:view.frame inView:view.superview];
     [menu setMenuVisible:YES animated:YES];
 }
 

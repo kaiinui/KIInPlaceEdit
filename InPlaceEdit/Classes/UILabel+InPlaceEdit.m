@@ -29,18 +29,18 @@
     return (action == @selector(ipe_edit:));
 }
 
-# pragma mark - UIResponderStandardEditActions
-
-- (void)copy:(id)sender {
-    [[UIPasteboard generalPasteboard] setString:self.text];
-}
-
 # pragma mark - UIMenu Custom Item
 
 - (void)ipe_edit:(id)sender {
     NSString *text = self.text;
     self.text = @"";
     
+    [self initializeTextFieldWithText:text];
+}
+
+# pragma mark - Helpers (In Place Edit)
+
+- (void)initializeTextFieldWithText:(NSString *)text {
     UITextField *field = [[UITextField alloc] initWithFrame:self.bounds];
     field.text = text;
     [self addSubview:field];
