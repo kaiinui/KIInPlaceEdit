@@ -8,6 +8,8 @@
 
 #import "KIViewController.h"
 
+#import "UILabel+InPlaceEdit.h"
+
 @interface KIViewController ()
 
 @end
@@ -17,7 +19,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    UILabel *label = (UILabel *)[self.view viewWithTag:1];
+    label.userInteractionEnabled = YES;
+    [label ipe_enableInPlaceEdit];
 }
 
 - (void)didReceiveMemoryWarning

@@ -21,6 +21,8 @@
 		D4EFB65319C2303A007383D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4EFB63519C2303A007383D5 /* UIKit.framework */; };
 		D4EFB65B19C2303A007383D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4EFB65919C2303A007383D5 /* InfoPlist.strings */; };
 		D4EFB65D19C2303A007383D5 /* InPlaceEditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFB65C19C2303A007383D5 /* InPlaceEditTests.m */; };
+		D4EFB66919C2308E007383D5 /* UILabel+InPlaceEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFB66819C2308E007383D5 /* UILabel+InPlaceEdit.m */; };
+		D4EFB66C19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFB66B19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		D4EFB65819C2303A007383D5 /* InPlaceEditTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InPlaceEditTests-Info.plist"; sourceTree = "<group>"; };
 		D4EFB65A19C2303A007383D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D4EFB65C19C2303A007383D5 /* InPlaceEditTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InPlaceEditTests.m; sourceTree = "<group>"; };
+		D4EFB66719C2308E007383D5 /* UILabel+InPlaceEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+InPlaceEdit.h"; sourceTree = "<group>"; };
+		D4EFB66819C2308E007383D5 /* UILabel+InPlaceEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+InPlaceEdit.m"; sourceTree = "<group>"; };
+		D4EFB66A19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIInPlaceEditLongTapGestureDelegate.h; sourceTree = "<group>"; };
+		D4EFB66B19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIInPlaceEditLongTapGestureDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 		D4EFB63719C2303A007383D5 /* InPlaceEdit */ = {
 			isa = PBXGroup;
 			children = (
+				D4EFB66619C23070007383D5 /* Classes */,
 				D4EFB64019C2303A007383D5 /* KIAppDelegate.h */,
 				D4EFB64119C2303A007383D5 /* KIAppDelegate.m */,
 				D4EFB64319C2303A007383D5 /* Main.storyboard */,
@@ -150,6 +157,17 @@
 				D4EFB65919C2303A007383D5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4EFB66619C23070007383D5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D4EFB66719C2308E007383D5 /* UILabel+InPlaceEdit.h */,
+				D4EFB66819C2308E007383D5 /* UILabel+InPlaceEdit.m */,
+				D4EFB66A19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.h */,
+				D4EFB66B19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +270,9 @@
 			files = (
 				D4EFB64819C2303A007383D5 /* KIViewController.m in Sources */,
 				D4EFB64219C2303A007383D5 /* KIAppDelegate.m in Sources */,
+				D4EFB66C19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.m in Sources */,
 				D4EFB63E19C2303A007383D5 /* main.m in Sources */,
+				D4EFB66919C2308E007383D5 /* UILabel+InPlaceEdit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
