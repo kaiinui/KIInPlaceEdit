@@ -20,7 +20,7 @@ It's one-line to enable in-place edit.
 
 There are some preset options.
 
-```
+```objc
 // KIInPlaceEditOptions.h
 
 + (instancetype)longPressToEdit;
@@ -29,7 +29,7 @@ There are some preset options.
 
 Available options are
 
-```
+```objc
 @property BOOL showPrompt; // Whether to show prompt before start in-place editing.
 @property NSString *promptLabel; // Default "Edit"
 @property KIInPlaceEditGesture gesture; // Currently only LongPress is provided.
