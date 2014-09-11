@@ -1,4 +1,4 @@
-KIInPlaceEdit
+![KIInPlaceEdit](https://dl.dropboxusercontent.com/u/7817937/_github/KIInPlaceEditLogo.png)
 =============
 
 In-place editing for UILabel.
