@@ -44,7 +44,7 @@
     UITextField *field = [[UITextField alloc] initWithFrame:self.bounds];
     field.text = text;
     field.font = self.font;
-    field.delegate = self.ipe_delegate;
+    field.delegate = self.ipe_controller;
     [self addSubview:field];
     [field becomeFirstResponder]; // Focus on the text field.
 }
@@ -52,24 +52,24 @@
 # pragma mark - Helpers (Gesture)
 
 - (void)initializeLongPressGestureDelegate {
-    self.ipe_delegate = [[KIInPlaceEditController alloc] initWithLabel:self];
+    self.ipe_controller = [[KIInPlaceEditController alloc] initWithLabel:self];
 }
 
 - (void)initializeLongPressGesture {
-    UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self.ipe_delegate action:@selector(handleLongPressGesture:)];
+    UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self.ipe_controller action:@selector(handleLongPressGesture:)];
     [self addGestureRecognizer:recognizer];
 }
 
 # pragma mark - Private
 
-@dynamic ipe_delegate;
+@dynamic ipe_controller;
 
-- (KIInPlaceEditController *)ipe_delegate {
-    return objc_getAssociatedObject(self, @selector(ipe_delegate));
+- (KIInPlaceEditController *)ipe_controller {
+    return objc_getAssociatedObject(self, @selector(ipe_controller));
 }
 
-- (void)setIpe_delegate:(KIInPlaceEditController *)ipe_delegate {
-    objc_setAssociatedObject(self, @selector(ipe_delegate), ipe_delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setIpe_controller:(KIInPlaceEditController *)ipe_controller {
+    objc_setAssociatedObject(self, @selector(ipe_controller), ipe_controller, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

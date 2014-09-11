@@ -20,6 +20,6 @@
 
 # pragma mark - Private
 
-@property (nonatomic, retain) KIInPlaceEditController *ipe_delegate;
+@property (nonatomic, retain) KIInPlaceEditController *ipe_controller;
 
 @end
