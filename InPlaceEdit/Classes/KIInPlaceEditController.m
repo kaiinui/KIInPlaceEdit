@@ -62,7 +62,6 @@
     textFrame.size = newSize;
     textField.frame = textFrame;
     
-    // Because the textfield is subview of the label, it is needed to change the size of the label.
     CGRect labelFrame = self.label.frame;
     labelFrame.size = newSize;
     self.label.frame = labelFrame;

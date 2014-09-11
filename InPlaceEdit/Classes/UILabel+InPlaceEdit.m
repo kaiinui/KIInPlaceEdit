@@ -15,7 +15,7 @@
 @implementation UILabel (InPlaceEdit)
 
 - (void)ipe_enableInPlaceEdit {
-    [self initializeLongPressGestureDelegate];
+    [self initializeInPlaceEditController];
     [self initializeLongPressGesture];
 }
 
@@ -51,7 +51,7 @@
 
 # pragma mark - Helpers (Gesture)
 
-- (void)initializeLongPressGestureDelegate {
+- (void)initializeInPlaceEditController {
     self.ipe_controller = [[KIInPlaceEditController alloc] initWithLabel:self];
 }
 
