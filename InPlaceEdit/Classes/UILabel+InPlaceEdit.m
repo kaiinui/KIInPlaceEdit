@@ -19,8 +19,20 @@
     [self initializeLongPressGesture];
 }
 
+# pragma mark - UIResponder
+
 - (BOOL)canBecomeFirstResponder {
     return YES;
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    return (action == @selector(copy:));
+}
+
+# pragma mark - UIResponderStandardEditActions
+
+- (void)copy:(id)sender {
+    [[UIPasteboard generalPasteboard] setString:self.text];
 }
 
 # pragma mark - Helpers (Gesture)

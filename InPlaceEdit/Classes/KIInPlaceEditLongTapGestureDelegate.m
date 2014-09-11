@@ -10,8 +10,17 @@
 
 @implementation KIInPlaceEditLongTapGestureDelegate
 
+# pragma mark - UIGestureRecognizer
+
 - (void)handleLongPressGesture:(UIGestureRecognizer *)recognizer {
-    NSLog(@"whoa!");
+    if (recognizer.state != UIGestureRecognizerStateBegan) { return; }
+    
+    NSLog(@"whoa");
+    
+    [recognizer.view becomeFirstResponder];
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    [menu setTargetRect:recognizer.view.frame inView:recognizer.view.superview];
+    [menu setMenuVisible:YES animated:YES];
 }
 
 @end
