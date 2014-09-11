@@ -33,7 +33,11 @@
 - (void)handleLongPressGesture:(UIGestureRecognizer *)recognizer {
     if (recognizer.state != UIGestureRecognizerStateBegan) { return; }
     
-    [self showMenuWithEditItemForView:recognizer.view];
+    if (self.label.ipe_option.showMenu == YES) {
+        [self showMenuWithEditItemForView:recognizer.view];
+    } else {
+        [self.label ipe_edit:nil]; // Bit dirty...
+    }
 }
 
 # pragma mark - UITextFieldDelegate

@@ -23,6 +23,7 @@
 		D4EFB65D19C2303A007383D5 /* InPlaceEditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFB65C19C2303A007383D5 /* InPlaceEditTests.m */; };
 		D4EFB66919C2308E007383D5 /* UILabel+InPlaceEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFB66819C2308E007383D5 /* UILabel+InPlaceEdit.m */; };
 		D4EFB66C19C230C2007383D5 /* KIInPlaceEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFB66B19C230C2007383D5 /* KIInPlaceEditController.m */; };
+		D4EFB66F19C24823007383D5 /* KIInPlaceEditOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFB66E19C24823007383D5 /* KIInPlaceEditOptions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		D4EFB66819C2308E007383D5 /* UILabel+InPlaceEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+InPlaceEdit.m"; sourceTree = "<group>"; };
 		D4EFB66A19C230C2007383D5 /* KIInPlaceEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIInPlaceEditController.h; sourceTree = "<group>"; };
 		D4EFB66B19C230C2007383D5 /* KIInPlaceEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIInPlaceEditController.m; sourceTree = "<group>"; };
+		D4EFB66D19C24823007383D5 /* KIInPlaceEditOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIInPlaceEditOptions.h; sourceTree = "<group>"; };
+		D4EFB66E19C24823007383D5 /* KIInPlaceEditOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIInPlaceEditOptions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,8 @@
 				D4EFB66819C2308E007383D5 /* UILabel+InPlaceEdit.m */,
 				D4EFB66A19C230C2007383D5 /* KIInPlaceEditController.h */,
 				D4EFB66B19C230C2007383D5 /* KIInPlaceEditController.m */,
+				D4EFB66D19C24823007383D5 /* KIInPlaceEditOptions.h */,
+				D4EFB66E19C24823007383D5 /* KIInPlaceEditOptions.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				D4EFB66C19C230C2007383D5 /* KIInPlaceEditController.m in Sources */,
 				D4EFB63E19C2303A007383D5 /* main.m in Sources */,
 				D4EFB66919C2308E007383D5 /* UILabel+InPlaceEdit.m in Sources */,
+				D4EFB66F19C24823007383D5 /* KIInPlaceEditOptions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +483,7 @@
 				D4EFB66219C2303A007383D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4EFB66319C2303A007383D5 /* Build configuration list for PBXNativeTarget "InPlaceEditTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +492,7 @@
 				D4EFB66519C2303A007383D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
