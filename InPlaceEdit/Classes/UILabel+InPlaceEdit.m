@@ -26,13 +26,25 @@
 }
 
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
-    return (action == @selector(copy:));
+    return (action == @selector(ipe_edit:));
 }
 
 # pragma mark - UIResponderStandardEditActions
 
 - (void)copy:(id)sender {
     [[UIPasteboard generalPasteboard] setString:self.text];
+}
+
+# pragma mark - UIMenu Custom Item
+
+- (void)ipe_edit:(id)sender {
+    NSString *text = self.text;
+    self.text = @"";
+    
+    UITextField *field = [[UITextField alloc] initWithFrame:self.bounds];
+    field.text = text;
+    [self addSubview:field];
+    [field becomeFirstResponder];
 }
 
 # pragma mark - Helpers (Gesture)

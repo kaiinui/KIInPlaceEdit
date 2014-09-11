@@ -14,6 +14,10 @@
 
 - (void)ipe_enableInPlaceEdit;
 
+# pragma mark - Protected
+
+- (void)ipe_edit:(id)sender;
+
 # pragma mark - Private
 
 @property (nonatomic, retain) KIInPlaceEditLongTapGestureDelegate *ipe_delegate;

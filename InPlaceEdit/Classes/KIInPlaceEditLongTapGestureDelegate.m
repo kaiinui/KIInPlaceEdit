@@ -8,6 +8,8 @@
 
 #import "KIInPlaceEditLongTapGestureDelegate.h"
 
+#import "UILabel+InPlaceEdit.h"
+
 @implementation KIInPlaceEditLongTapGestureDelegate
 
 # pragma mark - UIGestureRecognizer
@@ -15,10 +17,11 @@
 - (void)handleLongPressGesture:(UIGestureRecognizer *)recognizer {
     if (recognizer.state != UIGestureRecognizerStateBegan) { return; }
     
-    NSLog(@"whoa");
-    
+    // @see http://nshipster.com/uimenucontroller/
     [recognizer.view becomeFirstResponder];
     UIMenuController *menu = [UIMenuController sharedMenuController];
+    UIMenuItem *editItem = [[UIMenuItem alloc] initWithTitle:@"Edit" action:@selector(ipe_edit:)];
+    [menu setMenuItems:@[editItem]];
     [menu setTargetRect:recognizer.view.frame inView:recognizer.view.superview];
     [menu setMenuVisible:YES animated:YES];
 }
