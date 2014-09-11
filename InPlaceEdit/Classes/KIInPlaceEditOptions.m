@@ -10,19 +10,19 @@
 
 @implementation KIInPlaceEditOptions
 
-@synthesize showMenu, gesture;
+@synthesize showPrompt, gesture;
 
-+ (instancetype)longPress {
++ (instancetype)longPressToEdit {
     KIInPlaceEditOptions *options = [[self alloc] init];
     options.gesture = KIInPlaceEditGestureLongPress;
-    options.showMenu = NO;
+    options.showPrompt = NO;
     return options;
 }
 
-+ (instancetype)longPressWithPrompt {
++ (instancetype)longPressAndPromptToEdit {
     KIInPlaceEditOptions *options = [[self alloc] init];
     options.gesture = KIInPlaceEditGestureLongPress;
-    options.showMenu = YES;
+    options.showPrompt = YES;
     return options;
 }
 

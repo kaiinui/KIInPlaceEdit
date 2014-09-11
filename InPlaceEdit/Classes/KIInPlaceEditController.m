@@ -33,7 +33,7 @@
 - (void)handleLongPressGesture:(UIGestureRecognizer *)recognizer {
     if (recognizer.state != UIGestureRecognizerStateBegan) { return; }
     
-    if (self.label.ipe_option.showMenu == YES) {
+    if (self.label.ipe_option.showPrompt == YES) {
         [self showMenuWithEditItemForView:recognizer.view];
     } else {
         [self.label ipe_edit:nil]; // Bit dirty...

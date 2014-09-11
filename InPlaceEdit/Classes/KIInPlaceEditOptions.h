@@ -14,10 +14,10 @@ typedef NS_ENUM(NSUInteger, KIInPlaceEditGesture) {
 
 @interface KIInPlaceEditOptions : NSObject
 
-@property BOOL showMenu;
+@property BOOL showPrompt;
 @property KIInPlaceEditGesture gesture;
 
-+ (instancetype)longPress;
-+ (instancetype)longPressWithPrompt;
++ (instancetype)longPressToEdit;
++ (instancetype)longPressAndPromptToEdit;
 
 @end

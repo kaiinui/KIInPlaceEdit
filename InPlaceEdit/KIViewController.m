@@ -22,7 +22,7 @@
 
     UILabel *label = (UILabel *)[self.view viewWithTag:1];
     label.userInteractionEnabled = YES;
-    [label ipe_enableInPlaceEdit:[KIInPlaceEditOptions longPressWithPrompt]];
+    [label ipe_enableInPlaceEdit:[KIInPlaceEditOptions longPressAndPromptToEdit]];
 }
 
 - (void)didReceiveMemoryWarning
