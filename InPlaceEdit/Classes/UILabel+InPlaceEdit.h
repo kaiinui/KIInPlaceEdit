@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class KIInPlaceEditLongTapGestureDelegate;
+@class KIInPlaceEditController;
 
 @interface UILabel (InPlaceEdit)
 
@@ -20,6 +20,6 @@
 
 # pragma mark - Private
 
-@property (nonatomic, retain) KIInPlaceEditLongTapGestureDelegate *ipe_delegate;
+@property (nonatomic, retain) KIInPlaceEditController *ipe_delegate;
 
 @end

@@ -22,7 +22,7 @@
 		D4EFB65B19C2303A007383D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4EFB65919C2303A007383D5 /* InfoPlist.strings */; };
 		D4EFB65D19C2303A007383D5 /* InPlaceEditTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFB65C19C2303A007383D5 /* InPlaceEditTests.m */; };
 		D4EFB66919C2308E007383D5 /* UILabel+InPlaceEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFB66819C2308E007383D5 /* UILabel+InPlaceEdit.m */; };
-		D4EFB66C19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFB66B19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.m */; };
+		D4EFB66C19C230C2007383D5 /* KIInPlaceEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFB66B19C230C2007383D5 /* KIInPlaceEditController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 		D4EFB65C19C2303A007383D5 /* InPlaceEditTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InPlaceEditTests.m; sourceTree = "<group>"; };
 		D4EFB66719C2308E007383D5 /* UILabel+InPlaceEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+InPlaceEdit.h"; sourceTree = "<group>"; };
 		D4EFB66819C2308E007383D5 /* UILabel+InPlaceEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+InPlaceEdit.m"; sourceTree = "<group>"; };
-		D4EFB66A19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIInPlaceEditLongTapGestureDelegate.h; sourceTree = "<group>"; };
-		D4EFB66B19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIInPlaceEditLongTapGestureDelegate.m; sourceTree = "<group>"; };
+		D4EFB66A19C230C2007383D5 /* KIInPlaceEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIInPlaceEditController.h; sourceTree = "<group>"; };
+		D4EFB66B19C230C2007383D5 /* KIInPlaceEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIInPlaceEditController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +164,8 @@
 			children = (
 				D4EFB66719C2308E007383D5 /* UILabel+InPlaceEdit.h */,
 				D4EFB66819C2308E007383D5 /* UILabel+InPlaceEdit.m */,
-				D4EFB66A19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.h */,
-				D4EFB66B19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.m */,
+				D4EFB66A19C230C2007383D5 /* KIInPlaceEditController.h */,
+				D4EFB66B19C230C2007383D5 /* KIInPlaceEditController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 			files = (
 				D4EFB64819C2303A007383D5 /* KIViewController.m in Sources */,
 				D4EFB64219C2303A007383D5 /* KIAppDelegate.m in Sources */,
-				D4EFB66C19C230C2007383D5 /* KIInPlaceEditLongTapGestureDelegate.m in Sources */,
+				D4EFB66C19C230C2007383D5 /* KIInPlaceEditController.m in Sources */,
 				D4EFB63E19C2303A007383D5 /* main.m in Sources */,
 				D4EFB66919C2308E007383D5 /* UILabel+InPlaceEdit.m in Sources */,
 			);

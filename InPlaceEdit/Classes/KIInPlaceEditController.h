@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KIInPlaceEditLongTapGestureDelegate : NSObject
+@interface KIInPlaceEditController : NSObject <UITextFieldDelegate>
+
+- (instancetype)initWithLabel:(UILabel *)label;
 
 - (void)handleLongPressGesture:(UIGestureRecognizer *)recognizer;
 

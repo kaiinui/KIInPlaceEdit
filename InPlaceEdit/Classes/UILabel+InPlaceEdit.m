@@ -10,7 +10,7 @@
 
 #import <objc/runtime.h>
 
-#import "KIInPlaceEditLongTapGestureDelegate.h"
+#import "KIInPlaceEditController.h"
 
 @implementation UILabel (InPlaceEdit)
 
@@ -43,14 +43,15 @@
 - (void)initializeTextFieldWithText:(NSString *)text {
     UITextField *field = [[UITextField alloc] initWithFrame:self.bounds];
     field.text = text;
+    field.delegate = self.ipe_delegate;
     [self addSubview:field];
-    [field becomeFirstResponder];
+    [field becomeFirstResponder]; // Focus on the text field.
 }
 
 # pragma mark - Helpers (Gesture)
 
 - (void)initializeLongPressGestureDelegate {
-    self.ipe_delegate = [[KIInPlaceEditLongTapGestureDelegate alloc] init];
+    self.ipe_delegate = [[KIInPlaceEditController alloc] initWithLabel:self];
 }
 
 - (void)initializeLongPressGesture {
@@ -62,11 +63,11 @@
 
 @dynamic ipe_delegate;
 
-- (KIInPlaceEditLongTapGestureDelegate *)ipe_delegate {
+- (KIInPlaceEditController *)ipe_delegate {
     return objc_getAssociatedObject(self, @selector(ipe_delegate));
 }
 
-- (void)setIpe_delegate:(KIInPlaceEditLongTapGestureDelegate *)ipe_delegate {
+- (void)setIpe_delegate:(KIInPlaceEditController *)ipe_delegate {
     objc_setAssociatedObject(self, @selector(ipe_delegate), ipe_delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
