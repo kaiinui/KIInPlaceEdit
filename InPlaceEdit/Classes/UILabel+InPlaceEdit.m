@@ -43,6 +43,7 @@
 - (void)initializeTextFieldWithText:(NSString *)text {
     UITextField *field = [[UITextField alloc] initWithFrame:self.bounds];
     field.text = text;
+    field.font = self.font;
     field.delegate = self.ipe_delegate;
     [self addSubview:field];
     [field becomeFirstResponder]; // Focus on the text field.
