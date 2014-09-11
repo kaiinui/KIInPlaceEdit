@@ -36,6 +36,10 @@
 
 # pragma mark - UIMenu Custom Item
 
+/**
+ *  Starts in-place editing.
+ *  Should be called via `UIMenu` or `- handleGesture` of `KIInPlaceEditController`.
+ */
 - (void)ipe_edit:(id)sender {
     NSString *text = self.text;
     self.text = @"";

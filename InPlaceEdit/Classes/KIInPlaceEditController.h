@@ -12,6 +12,6 @@
 
 - (instancetype)initWithLabel:(UILabel *)label;
 
-- (void)handleLongPressGesture:(UIGestureRecognizer *)recognizer;
+- (void)handleGesture:(UIGestureRecognizer *)recognizer;
 
 @end

@@ -38,7 +38,7 @@
 }
 
 - (void)initializeGesture {
-    UIGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self.ipe_controller action:@selector(handleLongPressGesture:)];
+    UIGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self.ipe_controller action:@selector(handleGesture:)];
     [self addGestureRecognizer:recognizer];
 }
 

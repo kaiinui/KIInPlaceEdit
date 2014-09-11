@@ -31,7 +31,10 @@
 
 # pragma mark - UIGestureRecognizer
 
-- (void)handleLongPressGesture:(UIGestureRecognizer *)recognizer {
+/**
+ *  Will be targeted in `UILabel+InPlaceEdit.m` on initialization.
+ */
+- (void)handleGesture:(UIGestureRecognizer *)recognizer {
     if (recognizer.state != UIGestureRecognizerStateBegan) { return; }
     
     if (self.label.ipe_option.showPrompt == YES) {
@@ -58,6 +61,10 @@
 
 # pragma mark - Helpers (Dynamic Sized TextField)
 
+/**
+ *  Should be targeted with `UIControlEventEditingChanged`.
+ *  This method fits the text field and the label with their text.
+ */
 - (IBAction)textFieldDidChange:(UITextField *)textField {
     NSString *value = textField.text;
     // @see http://stackoverflow.com/questions/19145078/ios-7-sizewithattributes-replacement-for-sizewithfontconstrainedtosize
@@ -78,7 +85,7 @@
     // @see http://nshipster.com/uimenucontroller/
     [view becomeFirstResponder];
     UIMenuController *menu = [UIMenuController sharedMenuController];
-    UIMenuItem *editItem = [[UIMenuItem alloc] initWithTitle:@"Edit" action:@selector(ipe_edit:)]; // TODO: make it i18n-able.
+    UIMenuItem *editItem = [[UIMenuItem alloc] initWithTitle:self.label.ipe_option.promptLabel action:@selector(ipe_edit:)];
     [menu setMenuItems:@[editItem]];
     [menu setTargetRect:view.frame inView:view.superview];
     [menu setMenuVisible:YES animated:YES];

@@ -10,7 +10,19 @@
 
 @implementation KIInPlaceEditOptions
 
-@synthesize showPrompt, gesture;
+@synthesize showPrompt, promptLabel, gesture;
+
+# pragma mark - Lifecycle
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.promptLabel = @"Edit";
+    }
+    return self;
+}
+
+# pragma mark - Preset
 
 + (instancetype)longPressToEdit {
     KIInPlaceEditOptions *options = [[self alloc] init];
