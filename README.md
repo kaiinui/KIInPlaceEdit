@@ -1,6 +1,8 @@
 ![KIInPlaceEdit](https://dl.dropboxusercontent.com/u/7817937/_github/KIInPlaceEditLogo.png)
 =============
 
+![](http://img.shields.io/cocoapods/v/KIInPlaceEdit.svg?style=flat)
+
 In-place editing for UILabel.
 
 `UILabel+InPlaceEdit.h` enables users to edit a label in the place.
