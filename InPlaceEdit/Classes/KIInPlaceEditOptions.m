@@ -22,7 +22,7 @@
     return self;
 }
 
-# pragma mark - Preset
+# pragma mark - Presets
 
 + (instancetype)longPressToEdit {
     KIInPlaceEditOptions *options = [[self alloc] init];
@@ -36,6 +36,14 @@
     options.gesture = KIInPlaceEditGestureLongPress;
     options.showPrompt = YES;
     return options;
+}
+
+# pragma mark - UIControl Events
+
+- (void)setTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)events {
+    self.target = target;
+    self.action = action;
+    self.events = events;
 }
 
 @end
