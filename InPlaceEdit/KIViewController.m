@@ -16,17 +16,22 @@
 
 @implementation KIViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 
     UILabel *label = (UILabel *)[self.view viewWithTag:1];
     label.userInteractionEnabled = YES;
-    [label ipe_enableInPlaceEdit:[KIInPlaceEditOptions longPressAndPromptToEdit]];
+    KIInPlaceEditOptions *options = [KIInPlaceEditOptions longPressAndPromptToEdit];
+    [options setTarget:self action:@selector(inPlaceTextFieldEvent:) forControlEvents:UIControlEventEditingDidEnd];
+    [label ipe_enableInPlaceEdit:options];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)inPlaceTextFieldEvent:(id)sender {
+    UITextField *field = sender;
+    NSLog(@"End editing! %@", field.text);
+}
+
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
