@@ -11,6 +11,7 @@
 #import <objc/runtime.h>
 
 #import "KIInPlaceEditController.h"
+#import "KIInPlaceEditOptions.h"
 
 @implementation UILabel (InPlaceEditPrivate)
 
@@ -55,6 +56,9 @@
     field.font = self.font;
     field.textColor = self.textColor;
     field.delegate = self.ipe_controller;
+    if (self.ipe_option.target != nil) {
+        [field addTarget:self.ipe_option.target action:self.ipe_option.action forControlEvents:self.ipe_option.events];
+    }
     [self addSubview:field];
     [field becomeFirstResponder]; // Focus on the text field.
 }
