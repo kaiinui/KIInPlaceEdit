@@ -8,11 +8,12 @@ In-place editing for UILabel.
 Usage
 ---
 
-It's one-line to enable in-place edit.
+It's few lines to enable in-place edit. Do not forget to set `userInteractionEnabled` to `YES`. Otherwise it will not work.
 
 ```objc
 #import "UILabel+InPlaceEdit.h"
 
+label.userInteractionEnabled = YES;
 [label ipe_enableInPlaceEdit:[KIInPlaceEditOptions longPressAndPromptToEdit]];
 ```
 
@@ -41,6 +42,7 @@ You can provide your options as following.
 KIInPlaceEditOptions *options = [[KIInPlaceEditOptions alloc] init];
 options.showPrompt = YES;
 options.promptLabel = "You want to edit?";
+label.userInteractionEnabled = YES;
 [label ipe_enableInPlaceEdit:options];
 ```
 
