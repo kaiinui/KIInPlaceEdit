@@ -26,7 +26,7 @@ typedef NS_ENUM(NSUInteger, KIInPlaceEditGesture) {
  *  The label of a prompt which will be shown if you set `showPrompt` to `YES`.
  *  Default value is "Edit".
  */
-@property NSString *promptLabel;
+@property (nonatomic, copy) NSString *promptLabel;
 
 /**
  *  Gesture to start in-place editing.
