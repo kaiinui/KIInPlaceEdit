@@ -53,6 +53,7 @@
     UITextField *field = [[UITextField alloc] initWithFrame:self.bounds];
     field.text = text;
     field.font = self.font;
+    field.textColor = self.textColor;
     field.delegate = self.ipe_controller;
     [self addSubview:field];
     [field becomeFirstResponder]; // Focus on the text field.
