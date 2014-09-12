@@ -50,6 +50,27 @@ label.userInteractionEnabled = YES;
 [label ipe_enableInPlaceEdit:options];
 ```
 
+`UIControl` Events
+---
+
+You can receive `UIControl` events by setting options as following.
+
+```objc
+KIInPlaceEditOptions *options = [KIInPlaceOptions longPressAndPromptToEdit];
+[options setTarget:self action:@selector(didEndInPlaceEdit:) forControlEvents:UIControlEventEditingDidEnd];
+label.userInteractionEnabled = YES;
+[label ipe_enableInPlaceEdit:options];
+
+// ...
+
+- (void)didEndInPlaceEdit:(id)sender {
+    UITextField *textField = sender;
+    NSLog(@"End editing with value: %@", textField.text);
+}
+```
+
+For more information about UIControl Events, please refer [UIControl Class Reference](https://developer.apple.com/library/ios/documentation/uikit/reference/uicontrol_class/reference/reference.html)
+
 Installation
 ---
 
