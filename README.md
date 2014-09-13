@@ -1,7 +1,7 @@
 ![KIInPlaceEdit](https://dl.dropboxusercontent.com/u/7817937/_github/KIInPlaceEditLogo.png)
 =============
 
-![](http://img.shields.io/cocoapods/v/KIInPlaceEdit.svg?style=flat) ![](https://api.travis-ci.org/kaiinui/KIInPlaceEdit.svg?branch=master) ([Test Cases](https://github.com/kaiinui/KIInPlaceEdit/blob/master/InPlaceEditTests/InPlaceEditTests.m))
+![](http://img.shields.io/cocoapods/v/KIInPlaceEdit.svg?style=flat) ![](http://img.shields.io/travis/kaiinui/KIInPlaceEdit.svg?style=flat) ![](http://img.shields.io/badge/test-Unit+E2E-green.svg?style=flat)
 
 In-place editing for UILabel.
 
