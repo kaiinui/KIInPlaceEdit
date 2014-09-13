@@ -1,0 +1,10 @@
+language: objective-c
+branches:
+  only:
+  - master
+notifications:
+  email: false
+  
+before_install: gem install cocoapods
+
+script: xctool ONLY_ACTIVE_ARCH=NO -workspace InPlaceEdit.xcworkspace -scheme InPlaceEdit build test clean -sdk iphonesimulator
