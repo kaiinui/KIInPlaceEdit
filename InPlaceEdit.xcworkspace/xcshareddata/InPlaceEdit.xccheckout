@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>752DD25F-FEBD-44BC-916C-57731B05E65C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>InPlaceEdit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CB9B2EE5-638A-4513-9EDB-B450379E738A</key>
+		<string>ssh://github.com/kaiinui/KIInPlaceEdit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>InPlaceEdit.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CB9B2EE5-638A-4513-9EDB-B450379E738A</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/kaiinui/KIInPlaceEdit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CB9B2EE5-638A-4513-9EDB-B450379E738A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CB9B2EE5-638A-4513-9EDB-B450379E738A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>InPlaceEdit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
