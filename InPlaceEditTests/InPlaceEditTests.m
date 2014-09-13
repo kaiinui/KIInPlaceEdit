@@ -57,10 +57,16 @@ SpecEnd
 SpecBegin(KIViewController)
 
 describe(@"KIViewController", ^{
+    UILabel *testLabel = (UILabel *)[tester waitForViewWithAccessibilityLabel:@"test"];
+    
     [tester longPressViewWithAccessibilityLabel:@"Label" value:nil duration:0.5f];
-    [tester tapViewWithAccessibilityLabel:@"Edit"];
+    [tester tapViewWithAccessibilityLabel:@"Edit"]; // UIMenu Edit
     [tester enterTextIntoCurrentFirstResponder:@"Hi! Test!"];
-    [tester tapViewWithAccessibilityLabel:@"return"];
+    [tester tapViewWithAccessibilityLabel:@"return"]; // Keyboard return
+    
+    it(@"should catch editEnd event and set text to the test label", ^{
+        expect(testLabel.text).to.equal(@"value = LabelHi! Test!");
+    });
 });
 
 SpecEnd

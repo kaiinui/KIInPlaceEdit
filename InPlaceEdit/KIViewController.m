@@ -12,23 +12,26 @@
 
 @interface KIViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UILabel *someLabel;
+
 @end
 
 @implementation KIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    UILabel *label = (UILabel *)[self.view viewWithTag:1];
-    label.userInteractionEnabled = YES;
+    
+    self.label.userInteractionEnabled = YES;
     KIInPlaceEditOptions *options = [KIInPlaceEditOptions longPressAndPromptToEdit];
     [options setTarget:self action:@selector(inPlaceTextFieldEvent:) forControlEvents:UIControlEventEditingDidEnd];
-    [label ipe_enableInPlaceEdit:options];
+    [self.label ipe_enableInPlaceEdit:options];
 }
 
 - (void)inPlaceTextFieldEvent:(id)sender {
     UITextField *field = sender;
-    NSLog(@"End editing! %@", field.text);
+    
+    self.someLabel.text = [NSString stringWithFormat:@"value = %@", field.text];
 }
 
 - (void)didReceiveMemoryWarning {
