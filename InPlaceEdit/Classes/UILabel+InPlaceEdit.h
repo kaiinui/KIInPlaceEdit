@@ -13,10 +13,16 @@
 @interface UILabel (InPlaceEdit)
 
 /**
- * Call this method with options to enable In-place editing.
+ *  Call this method with options to enable In-place editing.
  *
- * @param option see KIInPlaceEditOptions
- * @see KIInPlaceEditOptions
+ *  There are some preset options. In example, you can enable in-place editing as following.
+ *
+ *      [label ipe_enableInPlaceEdit:[KIInPlaceEditOptions longPressAndPromptToEdit]];
+ *
+ *  For more information, see `KIInPlaceEditOptions`.
+ *
+ *  @param option see KIInPlaceEditOptions
+ *  @see KIInPlaceEditOptions
  */
 - (void)ipe_enableInPlaceEdit:(KIInPlaceEditOptions *)option;
 
