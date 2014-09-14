@@ -56,7 +56,7 @@ label.userInteractionEnabled = YES;
 You can receive `UIControl` events by setting options as following.
 
 ```objc
-KIInPlaceEditOptions *options = [KIInPlaceOptions longPressAndPromptToEdit];
+KIInPlaceEditOptions *options = [KIInPlaceEditOptions longPressAndPromptToEdit];
 [options setTarget:self action:@selector(didEndInPlaceEdit:) forControlEvents:UIControlEventEditingDidEnd];
 label.userInteractionEnabled = YES;
 [label ipe_enableInPlaceEdit:options];
