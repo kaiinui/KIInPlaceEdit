@@ -1,7 +1,7 @@
 ![KIInPlaceEdit](https://dl.dropboxusercontent.com/u/7817937/_github/KIInPlaceEditLogo.png)
 =============
 
-![](http://img.shields.io/cocoapods/v/KIInPlaceEdit.svg?style=flat)
+![](http://img.shields.io/cocoapods/v/KIInPlaceEdit.svg?style=flat) ![](http://img.shields.io/travis/kaiinui/KIInPlaceEdit.svg?style=flat) ![](http://img.shields.io/badge/test-Unit+E2E-green.svg?style=flat)
 
 In-place editing for UILabel.
 
@@ -75,6 +75,15 @@ Installation
 ---
 
 `pod 'KIInPlaceEdit'`
+
+Test
+---
+
+```
+xcodebuild -workspace InPlaceEdit.xcworkspace -scheme InPlaceEditTests -destination 'platform=iOS Simulator,name=iPhone Retina (4-inch 64-bit)' test
+```
+
+[You can find test cases here](xcodebuild -workspace InPlaceEdit.xcworkspace -scheme InPlaceEditTests -destination 'platform=iOS Simulator,name=iPhone Retina (4-inch 64-bit)' test).
 
 LICENSE
 ---
