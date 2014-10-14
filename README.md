@@ -3,7 +3,7 @@
 
 ![](http://img.shields.io/cocoapods/v/KIInPlaceEdit.svg?style=flat) ![](http://img.shields.io/travis/kaiinui/KIInPlaceEdit.svg?style=flat) ![](http://img.shields.io/badge/test-Unit+E2E-green.svg?style=flat)
 
-In-place editing for UILabel.
+In-place editing for `UILabel`.
 
 `UILabel+InPlaceEdit.h` enables users to edit a label in the place.
 
